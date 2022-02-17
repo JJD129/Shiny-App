@@ -1,0 +1,27 @@
+---
+title: "Week 4 Assignment"
+author: "JJD"
+date: "2/16/2022"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Project Overview
+
+Using red and white vinho verde wine samples from the north of Portugal the goal of this project is to model wine quality based on physicochemical properties.
+
+What do I want to do? 
+
+```{r slide1, include=FALSE, echo = FALSE}
+library(xlsx)
+setwd("/Users/jenniferdimaano/Desktop/CourseraR/Developing Data Products/Shiny App/Shiny-App")
+wineData<-read.xlsx("winequality.xlsx", sheetIndex = 1, header = TRUE)
+```
+
+## Sources
+Paulo Cortez, University of Minho, Guimarães, Portugal, http://www3.dsi.uminho.pt/pcortez
+A. Cerdeira, F. Almeida, T. Matos and J. Reis, Viticulture Commission of the Vinho Verde Region(CVRVV), Porto, Portugal
+@2009

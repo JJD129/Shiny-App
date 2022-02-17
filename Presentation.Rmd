@@ -11,15 +11,26 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Project Overview
 
-Using red and white vinho verde wine samples from the north of Portugal the goal of this project is to model wine quality based on physicochemical properties.
+Using red and white vinho verde wine samples from the north of Portugal the goal of this project is to model wine quality based on physicochemical properties. Two datasets were created separating the red and white varieties. Collected fields included objective tests of the wine and was graded by wine quality by experts. 
 
-What do I want to do? 
+In this datset it should be noted only physiochemical and sensory variables were collected not about the wine product itself i.e. grapye, brand, price, etc.
 
 ```{r slide1, include=FALSE, echo = FALSE}
 library(xlsx)
 setwd("/Users/jenniferdimaano/Desktop/CourseraR/Developing Data Products/Shiny App/Shiny-App")
 wineData<-read.xlsx("winequality.xlsx", sheetIndex = 1, header = TRUE)
 ```
+
+## Data Overview
+```{r summary, include=TRUE, comment=NA}
+summary(wineData)
+```
+
+## Objective
+
+The properties that will be examined are alcohol, fixed acidity and volatile acidity. Acids heavily impact the balance and taste of a wine. Most importantly acids help protect the wine over time.
+
+What this app tries to examine is how much the examined properties affect wine quality.
 
 ## Sources
 Paulo Cortez, University of Minho, Guimarães, Portugal, http://www3.dsi.uminho.pt/pcortez
